@@ -208,10 +208,10 @@
             line-height: 1.8;
         }
         
-        .about-text p:first-child::first-line {
+        /* .about-text p:first-child::first-line {
             font-weight: 500;
             color: var(--text-color);
-        }
+        } */
         
         /* Skills Section */
         #skills {
