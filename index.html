@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiram | MERN Stack Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Abhiram</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content fade-in">
+                    <h1>Hi, I'm <span class="accent-text">Abhiram</span></h1>
+                    <p>MERN Stack Developer focused on building and scaling web applications.</p>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                        <a href="https://github.com/AbhiramN-Mern" target="_blank" class="btn btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhiram-n-" target="_blank" class="btn btn-linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-bg">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#4B5EAA" d="M45.7,-67.3C59.2,-58.4,70.1,-43.2,75.6,-26.5C81.1,-9.8,81.2,8.5,75.4,24.9C69.6,41.3,57.9,55.7,43.6,66.1C29.3,76.5,12.6,82.9,-2.9,83.2C-18.4,83.5,-36.8,77.7,-51.7,66.2C-66.6,54.7,-77.9,37.6,-80.8,19.8C-83.7,2,-78.2,-16.5,-69.1,-32.7C-60,-48.9,-47.3,-62.8,-32.5,-70.3C-17.7,-77.8,0.1,-78.9,15.6,-73.7C31,-68.5,43.7,-56.2,45.7,-67.3Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="fade-in">About <span class="accent-text">Me</span></h2>
+            <div class="about-container fade-in">
+                <div class="about-content">
+                    
+                    <div class="about-text">
+                        <p>I'm Abhiram, a passionate Full Stack Developer specializing in the MERN stack (MongoDB, Express.js, React, Node.js), focused on building scalable, high-performance web applications. I actively contribute to open source projects, collaborating with developers worldwide and gaining practical experience with real-world codebases. I’m committed to delivering efficient, well-structured solutions and enjoy working on challenging problems that create meaningful impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="fade-in">My <span class="accent-text">Skills</span></h2>
+            <div class="skills-orbit fade-in">
+                <!-- Skills will be added dynamically with JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="fade-in">My <span class="accent-text">Projects</span></h2>
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                <!-- Project 1 -->
+                <div class="col fade-in">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Website</h3>
+                            <p>A responsive full-stack furniture e-commerce site</p>
+                            <div class="btn-group">
+                                <a href="https://github.com/AbhiramN-Mern/Ecommerce-UrbenNest" class="btn btn-github">
+                                    <i class="fab fa-github me-1"></i> GitHub
+                                </a>
+                                <a href="https://urbennest.shop" class="btn btn-live">
+                                    <i class="fas fa-external-link-alt me-1"></i> Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col fade-in">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>User Management System</h3>
+                            <p>Secure admin dashboard with user authentication & role-based access</p>
+                            <div class="btn-group">
+                                <a href="https://github.com/AbhiramN-Mern/User-management-system-" class="btn btn-github">
+                                    <i class="fab fa-github me-1"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-live">
+                                    <i class="fas fa-external-link-alt me-1"></i> Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote">
+        <div class="container">
+            <div class="quote-content fade-in">
+                <p class="quote-text">Success is not in what you have, but who you are.</p>
+                <p class="quote-author">— Bo Bennett</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:abhiram@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2025 Abhiram. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
