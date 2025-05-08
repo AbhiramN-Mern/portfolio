@@ -212,7 +212,7 @@ function validateForm(event) {
         };
 
         // Send email using EmailJS
-        emailjs.send(process.env.NETLIFY_EMAILJS_SERVICE_ID, process.env.NETLIFY_EMAILJS_TEMPLATE_ID, templateParams)
+        emailjs.send('CaZXPKTwK5zeQE5KF', 'service_yi19sep', templateParams)
             .then(function() {
                 // Create success message if it doesn't exist
                 let successMessage = document.querySelector('.form-message.success');
@@ -300,6 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     emailJsScript.onload = function() {
         // Initialize EmailJS with environment variable
-        emailjs.init(process.env.NETLIFY_EMAILJS_PUBLIC_KEY);
+        emailjs.init(process.env.template_c49qfpo);
     };
 });
