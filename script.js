@@ -136,3 +136,95 @@
                 navbar.style.backgroundColor = 'rgba(13, 13, 13, 0.95)';
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Add EmailJS script to the document
+    const emailJsScript = document.createElement('script');
+    emailJsScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    document.head.appendChild(emailJsScript);
+
+    emailJsScript.onload = function() {
+        // Initialize EmailJS
+        // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+        emailjs.init('CaZXPKTwK5zeQE5KF');
+    };
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        // Create message elements
+        const successMessage = document.createElement('div');
+        successMessage.className = 'form-message success';
+        successMessage.innerHTML = '<i class="fas fa-check-circle me-2"></i> Your message has been sent successfully!';
+        
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'form-message error';
+        errorMessage.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i> Oops! Something went wrong. Please try again.';
+        
+        // Append messages to form (initially hidden via CSS)
+        contactForm.appendChild(successMessage);
+        contactForm.appendChild(errorMessage);
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Hide any previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Get form data
+            const name = contactForm.querySelector('#name').value;
+            const email = contactForm.querySelector('#email').value;
+            const subject = contactForm.querySelector('#subject').value;
+            const message = contactForm.querySelector('#message').value;
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message
+            };
+            
+            // Send email
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
+            emailjs.send('service_yi19sep', 'template_c49qfpo', templateParams)
+                .then(function() {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                }, function(error) {
+                    // Show error message
+                    errorMessage.style.display = 'block';
+                    console.error('EmailJS error:', error);
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // Hide error message after 5 seconds
+                    setTimeout(function() {
+                        errorMessage.style.display = 'none';
+                    }, 5000);
+                });
+        });
+    }
+});
