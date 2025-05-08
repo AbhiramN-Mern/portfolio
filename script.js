@@ -300,6 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     emailJsScript.onload = function() {
         // Initialize EmailJS with environment variable
-        emailjs.init(process.env.template_c49qfpo);
+        emailjs.init(CaZXPKTwK5zeQE5KF);
     };
 });
